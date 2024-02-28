@@ -1,0 +1,456 @@
+/* VARIABLES */
+/* NORMALIZER   */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* TEXT */
+p {
+  max-width: 500px;
+  overflow-wrap: break-word;
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {
+  font: roboto;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 120px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 70px;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+/* BODY */
+body {
+  background-color: #F7F5EE;
+  max-width: 1680px;
+}
+
+/* LANDING SECTION */
+.landing-section {
+  height: 90vh;
+  width: 95vw;
+  padding: 2.5%;
+  display: flex;
+}
+.landing-section .yellow-square, .landing-section .blue-square, .landing-section .green-square, .landing-section .pink-square, .landing-section .red-square {
+  border-radius: 2%;
+  transition: transform 0.3s ease-in-out;
+}
+.landing-section .yellow-square {
+  background: #ffdc6a;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  z-index: 4;
+  background: rgba(255, 220, 106, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.landing-section .yellow-square .yellow-square-menu {
+  display: flex;
+}
+.landing-section .yellow-square .yellow-square-menu li {
+  margin: 15px 5px 0px 25px;
+  color: #E5527B;
+}
+.landing-section .blue-square {
+  background: #0e0fed;
+  width: 55%;
+  height: 55%;
+  position: absolute;
+  bottom: 100px;
+  left: 200px;
+  transform: translateZ(-15px) scale(1.1);
+  z-index: 3;
+  background: rgba(14, 15, 237, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.landing-section .blue-square .blue-square-container {
+  height: 100%;
+}
+.landing-section .blue-square .blue-square-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.landing-section .blue-square .blue-square-wrapper p {
+  margin: 0 0 15px 25px;
+  color: #F7F5EE;
+  word-spacing: 3px;
+}
+.landing-section .green-square {
+  background: #8bf0ba;
+  width: 65%;
+  height: 65%;
+  position: absolute;
+  top: 150px;
+  left: 300px;
+  background: rgba(139, 240, 186, 0.9);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 5;
+}
+.landing-section .green-square .green-square-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.landing-section .green-square .green-square-container .green-square-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.landing-section .green-square .green-square-container p {
+  color: grey;
+  text-overflow: ellipsis;
+  width: 250px;
+  overflow: hidden;
+}
+.landing-section .green-square .green-square-container p:first-child {
+  text-align: right;
+}
+.landing-section .pink-square {
+  background: #f2b1d8;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
+  z-index: 2;
+  background: rgba(242, 177, 216, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.landing-section .pink-square .pink-square-menu {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50%;
+}
+.landing-section .pink-square .pink-square-menu li {
+  margin: 0px 25px 15px 15px;
+  color: #E5527B;
+}
+.landing-section .teal-square {
+  background: #F9F1E1;
+  width: 55%;
+  height: 55%;
+  position: absolute;
+  top: 100px;
+  right: 170px;
+  z-index: 1;
+  background: rgba(249, 241, 225, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/*  ABOUT SECTION */
+.about {
+  width: 100vw;
+  height: 60%;
+  margin-top: 300px;
+  padding: 2.5%;
+}
+.about .about-container {
+  height: 100%;
+}
+.about .about-container .about-wrapper {
+  height: 100%;
+}
+.about .about-container .about-wrapper .about-left {
+  width: 50%;
+  height: 100%;
+}
+.about .about-container .about-wrapper .about-left .about-left-container {
+  height: 100%;
+  padding: 5% 8%;
+}
+.about .about-container .about-wrapper .about-left .about-left-container .about-left-wrapper {
+  height: 100%;
+}
+.about .about-container .about-wrapper .about-left .about-left-container .about-left-wrapper h3 {
+  padding: 15px 0px;
+  border-bottom: 0.5px solid #222222;
+}
+.about .about-container .about-right {
+  width: 100%;
+  margin: 0;
+}
+.about .about-container .about-right .about-right-container {
+  height: 100%;
+  padding: 5%;
+  margin-left: 50%;
+}
+.about .about-container .about-right .about-right-container .about-right-wrapper {
+  height: 100%;
+  display: flex;
+  border-top: 0.5px solid #222222;
+  padding-top: 15px;
+}
+.about .about-container .about-right .about-right-container .about-right-text-left, .about .about-container .about-right .about-right-container .about-right-text-right {
+  margin: 0px 15px;
+}
+.about .about-container .about-right .about-right-container .about-right-text-left p, .about .about-container .about-right .about-right-container .about-right-text-right p {
+  padding-bottom: 12px;
+  text-align: justify;
+}
+.about .about-container .about-right .about-right-container .about-right-text-left .erazmus, .about .about-container .about-right .about-right-container .about-right-text-right .erazmus {
+  background-color: #8bf0ba;
+}
+.about .about-container .about-right .about-right-container .about-right-text-left .opportunity, .about .about-container .about-right .about-right-container .about-right-text-right .opportunity {
+  background-color: #f2b1d8;
+}
+.about .about-container .about-right .about-right-container .about-right-text-left .denmark, .about .about-container .about-right .about-right-container .about-right-text-right .denmark {
+  background-color: #E5527B;
+}
+.about .about-container .about-right .about-right-container .about-right-text-left .spectrum, .about .about-container .about-right .about-right-container .about-right-text-right .spectrum {
+  background-color: #ffdc6a;
+}
+.about .about-container .about-right h3 {
+  margin-top: 70px;
+  padding-left: 15px;
+}
+
+/* SKILLS SECTION */
+.skills {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.skills .skills-wrapper {
+  height: 100%;
+  padding: 5%;
+}
+.skills .skills-wrapper .skills-heading-wrapper {
+  padding: 30px 50px;
+  margin-bottom: 200px;
+}
+.skills .skills-wrapper .skills-heading-wrapper .skills-heading {
+  border-top: 0.5px solid #222222;
+  border-bottom: 0.5px solid #222222;
+}
+.skills .skills-wrapper .skills-heading-wrapper .skills-heading h2 {
+  font-size: 150px;
+  text-align: center;
+}
+.skills .skills-wrapper .skills-container {
+  height: 100%;
+  width: 100%;
+}
+.skills .skills-wrapper .skills-container .skills-first-row, .skills .skills-wrapper .skills-container .skills-second-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.skills .skills-wrapper .skills-container .skills-first-row .javascript:hover, .skills .skills-wrapper .skills-container .skills-first-row .java:hover, .skills .skills-wrapper .skills-container .skills-first-row .c-sharp:hover, .skills .skills-wrapper .skills-container .skills-first-row .wordpress:hover, .skills .skills-wrapper .skills-container .skills-first-row .html:hover, .skills .skills-wrapper .skills-container .skills-first-row .css:hover, .skills .skills-wrapper .skills-container .skills-first-row .uix:hover, .skills .skills-wrapper .skills-container .skills-first-row .digital-marketing:hover, .skills .skills-wrapper .skills-container .skills-second-row .javascript:hover, .skills .skills-wrapper .skills-container .skills-second-row .java:hover, .skills .skills-wrapper .skills-container .skills-second-row .c-sharp:hover, .skills .skills-wrapper .skills-container .skills-second-row .wordpress:hover, .skills .skills-wrapper .skills-container .skills-second-row .html:hover, .skills .skills-wrapper .skills-container .skills-second-row .css:hover, .skills .skills-wrapper .skills-container .skills-second-row .uix:hover, .skills .skills-wrapper .skills-container .skills-second-row .digital-marketing:hover {
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  transform: scale(1.01);
+}
+.skills .skills-wrapper .skills-container .skills-first-row .javascript:hover, .skills .skills-wrapper .skills-container .skills-second-row .javascript:hover {
+  background: rgba(252, 220, 2, 0.25);
+}
+.skills .skills-wrapper .skills-container .skills-first-row .java:hover, .skills .skills-wrapper .skills-container .skills-second-row .java:hover {
+  background: rgba(3, 117, 143, 0.25);
+}
+.skills .skills-wrapper .skills-container .skills-first-row .c-sharp:hover, .skills .skills-wrapper .skills-container .skills-second-row .c-sharp:hover {
+  background: rgba(154, 113, 214, 0.25);
+}
+.skills .skills-wrapper .skills-container .skills-first-row .wordpress:hover, .skills .skills-wrapper .skills-container .skills-second-row .wordpress:hover {
+  background: rgba(69, 164, 197, 0.25);
+}
+.skills .skills-wrapper .skills-container .skills-first-row .html:hover, .skills .skills-wrapper .skills-container .skills-second-row .html:hover {
+  background: rgba(243, 101, 37, 0.25);
+}
+.skills .skills-wrapper .skills-container .skills-first-row .uix:hover, .skills .skills-wrapper .skills-container .skills-second-row .uix:hover {
+  background: rgba(139, 240, 186, 0.25);
+}
+.skills .skills-wrapper .skills-container .skills-first-row .css:hover, .skills .skills-wrapper .skills-container .skills-second-row .css:hover {
+  background: rgba(41, 102, 241, 0.25);
+}
+.skills .skills-wrapper .skills-container .skills-first-row .digital-marketing:hover, .skills .skills-wrapper .skills-container .skills-second-row .digital-marketing:hover {
+  background: rgba(251, 134, 36, 0.25);
+}
+.skills .skills-wrapper .skills-container .skills-first-row .javascript, .skills .skills-wrapper .skills-container .skills-first-row .java, .skills .skills-wrapper .skills-container .skills-first-row .c-sharp, .skills .skills-wrapper .skills-container .skills-first-row .wordpress, .skills .skills-wrapper .skills-container .skills-first-row .html, .skills .skills-wrapper .skills-container .skills-first-row .css, .skills .skills-wrapper .skills-container .skills-first-row .uix, .skills .skills-wrapper .skills-container .skills-first-row .digital-marketing, .skills .skills-wrapper .skills-container .skills-second-row .javascript, .skills .skills-wrapper .skills-container .skills-second-row .java, .skills .skills-wrapper .skills-container .skills-second-row .c-sharp, .skills .skills-wrapper .skills-container .skills-second-row .wordpress, .skills .skills-wrapper .skills-container .skills-second-row .html, .skills .skills-wrapper .skills-container .skills-second-row .css, .skills .skills-wrapper .skills-container .skills-second-row .uix, .skills .skills-wrapper .skills-container .skills-second-row .digital-marketing {
+  width: 25%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.skills .skills-wrapper .skills-container .skills-first-row .javascript .skill, .skills .skills-wrapper .skills-container .skills-first-row .java .skill, .skills .skills-wrapper .skills-container .skills-first-row .c-sharp .skill, .skills .skills-wrapper .skills-container .skills-first-row .wordpress .skill, .skills .skills-wrapper .skills-container .skills-first-row .html .skill, .skills .skills-wrapper .skills-container .skills-first-row .css .skill, .skills .skills-wrapper .skills-container .skills-first-row .uix .skill, .skills .skills-wrapper .skills-container .skills-first-row .digital-marketing .skill, .skills .skills-wrapper .skills-container .skills-second-row .javascript .skill, .skills .skills-wrapper .skills-container .skills-second-row .java .skill, .skills .skills-wrapper .skills-container .skills-second-row .c-sharp .skill, .skills .skills-wrapper .skills-container .skills-second-row .wordpress .skill, .skills .skills-wrapper .skills-container .skills-second-row .html .skill, .skills .skills-wrapper .skills-container .skills-second-row .css .skill, .skills .skills-wrapper .skills-container .skills-second-row .uix .skill, .skills .skills-wrapper .skills-container .skills-second-row .digital-marketing .skill {
+  height: 100%;
+  width: 100%;
+  padding: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skills-wrapper .skills-container .skills-first-row .javascript .skill p, .skills .skills-wrapper .skills-container .skills-first-row .java .skill p, .skills .skills-wrapper .skills-container .skills-first-row .c-sharp .skill p, .skills .skills-wrapper .skills-container .skills-first-row .wordpress .skill p, .skills .skills-wrapper .skills-container .skills-first-row .html .skill p, .skills .skills-wrapper .skills-container .skills-first-row .css .skill p, .skills .skills-wrapper .skills-container .skills-first-row .uix .skill p, .skills .skills-wrapper .skills-container .skills-first-row .digital-marketing .skill p, .skills .skills-wrapper .skills-container .skills-second-row .javascript .skill p, .skills .skills-wrapper .skills-container .skills-second-row .java .skill p, .skills .skills-wrapper .skills-container .skills-second-row .c-sharp .skill p, .skills .skills-wrapper .skills-container .skills-second-row .wordpress .skill p, .skills .skills-wrapper .skills-container .skills-second-row .html .skill p, .skills .skills-wrapper .skills-container .skills-second-row .css .skill p, .skills .skills-wrapper .skills-container .skills-second-row .uix .skill p, .skills .skills-wrapper .skills-container .skills-second-row .digital-marketing .skill p {
+  display: none;
+  transition: all 0.5s;
+}
+.skills .skills-wrapper .skills-container .skills-first-row .java, .skills .skills-wrapper .skills-container .skills-first-row .c-sharp, .skills .skills-wrapper .skills-container .skills-second-row .java, .skills .skills-wrapper .skills-container .skills-second-row .c-sharp {
+  border: 0.5px solid #222222;
+  border-top: none;
+}
+.skills .skills-wrapper .skills-container .skills-first-row .css, .skills .skills-wrapper .skills-container .skills-first-row .uix, .skills .skills-wrapper .skills-container .skills-second-row .css, .skills .skills-wrapper .skills-container .skills-second-row .uix {
+  border: 0.5px solid #222222;
+  border-bottom: none;
+}
+.skills .skills-wrapper .skills-container .skills-first-row .javascript, .skills .skills-wrapper .skills-container .skills-second-row .javascript {
+  border-right: 0.5px solid #222222;
+  border-bottom: 0.5px solid #222222;
+}
+.skills .skills-wrapper .skills-container .skills-first-row .html, .skills .skills-wrapper .skills-container .skills-second-row .html {
+  border-top: 0.5px solid #222222;
+  border-right: 0.5px solid #222222;
+}
+.skills .skills-wrapper .skills-container .skills-first-row .wordpress, .skills .skills-wrapper .skills-container .skills-second-row .wordpress {
+  border-left: 0.5px solid #222222;
+  border-bottom: 0.5px solid #222222;
+}
+.skills .skills-wrapper .skills-container .skills-first-row .digital-marketing, .skills .skills-wrapper .skills-container .skills-second-row .digital-marketing {
+  border-left: 0.5px solid #222222;
+  border-top: 0.5px solid #222222;
+}
+
+/* PORTFOLIO SECTION */
+.portfolio {
+  width: 100%;
+  background: #222222;
+  margin-top: -5px;
+  height: 100%;
+}
+.portfolio .portfolio-container {
+  height: 100%;
+  padding: 2.5%;
+}
+.portfolio .portfolio-container .portfolio-heading-wrapper {
+  padding: 30px 50px;
+}
+.portfolio .portfolio-container .portfolio-heading-wrapper .portfolio-heading {
+  border-top: 0.5px solid #F7F5EE;
+  border-bottom: 0.5px solid #F7F5EE;
+}
+.portfolio .portfolio-container .portfolio-heading-wrapper .portfolio-heading h2 {
+  color: #F7F5EE;
+  font-size: 170px;
+}
+.portfolio .portfolio-container .portfolio-wrapper {
+  height: 100%;
+  display: flex;
+}
+.portfolio .portfolio-container .portfolio-wrapper .portfolio-left, .portfolio .portfolio-container .portfolio-wrapper .portfolio-middle, .portfolio .portfolio-container .portfolio-wrapper .portfolio-right {
+  padding: 0% 2.5%;
+}
+.portfolio .portfolio-container .portfolio-wrapper .portfolio-left .portfolio-item, .portfolio .portfolio-container .portfolio-wrapper .portfolio-middle .portfolio-item, .portfolio .portfolio-container .portfolio-wrapper .portfolio-right .portfolio-item {
+  margin: 30px 0px;
+  padding: 20px 0px;
+  border-bottom: 0.5px solid #F7F5EE;
+}
+.portfolio .portfolio-container .portfolio-wrapper .portfolio-left .portfolio-item h3, .portfolio .portfolio-container .portfolio-wrapper .portfolio-left .portfolio-item p, .portfolio .portfolio-container .portfolio-wrapper .portfolio-middle .portfolio-item h3, .portfolio .portfolio-container .portfolio-wrapper .portfolio-middle .portfolio-item p, .portfolio .portfolio-container .portfolio-wrapper .portfolio-right .portfolio-item h3, .portfolio .portfolio-container .portfolio-wrapper .portfolio-right .portfolio-item p {
+  color: #F9F1E1;
+  margin: 15px 0px;
+}
+
+/* CONTACT */
+.contact {
+  width: 100%;
+  height: 65vh;
+  background: #020202;
+}
+.contact .contact-wrapper {
+  height: 100%;
+  padding: 2.5%;
+}
+.contact .contact-wrapper .contact-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.contact .contact-wrapper .contact-container .contact-left {
+  width: 50%;
+}
+.contact .contact-wrapper .contact-container .contact-left .contact-left-container {
+  height: 100%;
+}
+.contact .contact-wrapper .contact-container .contact-left .contact-left-container .contact-left-wrapper {
+  height: 100%;
+}
+.contact .contact-wrapper .contact-container .contact-right {
+  width: 50%;
+}
+.contact .contact-wrapper .contact-container .contact-right .contact-right-container {
+  height: 100%;
+}
+.contact .contact-wrapper .contact-container .contact-right .contact-right-container .contact-right-wrapper {
+  height: 100%;
+}
+
+/* FOOTER */
+.footer {
+  background: #020202;
+  border-top: 0.5px solid #F9F1E1;
+  height: 10vh;
+}
+.footer .footer-wrapper {
+  padding: 0px 25px;
+  height: 100%;
+}
+.footer .footer-wrapper .footer-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+.footer .footer-wrapper .footer-container p {
+  margin: 0px 10px;
+  color: #F7F5EE;
+}
+.footer .footer-wrapper .footer-container .footer-legalities {
+  display: flex;
+}
+.footer .footer-wrapper .footer-container .footer-legalities a {
+  margin: 0px 10px;
+  color: #F7F5EE;
+}/*# sourceMappingURL=style.css.map */
